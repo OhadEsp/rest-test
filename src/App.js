@@ -29,7 +29,7 @@ function App() {
         const data = await getData(url);
         setData(data);
         // console.log(JSON.stringify(data));
-      }}>Hello World</Button>
+      }}>Get Data</Button>
       <div>{JSON.stringify(data)}</div>
     </div>
   );
