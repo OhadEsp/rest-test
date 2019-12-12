@@ -7,33 +7,17 @@ import Table from './Table.jsx';
 function App() {
   const [url, setUrl] = useState('');
   const [data, setData] = useState();
-  let displayed = data !== undefined ? <Table data={data} /> : <div>{""}</div>;
+  let displayed = data !== undefined ? <Table data={data} /> : <div></div>;
 
   return (
     <div className="App">
-    {/* //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    //  */}
       <TextField fullWidth onChange={e => setUrl(e.target.value)}></TextField>
       <Button variant="contained" color="primary" onClick={async () => {
         const data = await getData(url);
         setData(data);
-        // console.log(JSON.stringify(data));
+        console.log(JSON.stringify(data));
       }}>Get Data</Button>
       <div>{displayed}</div>
-      {/* <Table data={data} /> */}
     </div>
   );
 }
