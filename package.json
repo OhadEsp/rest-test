@@ -13,7 +13,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "mock:api": "json-server --watch api/db.json --port 4000"
+    "mock:api": "json-server --watch api/db.json --port 4000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://ohadesper.github.io/rest-test",
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
