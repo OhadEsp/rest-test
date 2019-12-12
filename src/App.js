@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import './App.css';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Table from './Table.jsx';
 
 function App() {
   const [url, setUrl] = useState('');
-  const [data, setData] = useState('');
+  const [data, setData] = useState();
+  let displayed = data !== undefined ? <Table data={data} /> : <div>{""}</div>;
 
   return (
     <div className="App">
@@ -30,7 +32,8 @@ function App() {
         setData(data);
         // console.log(JSON.stringify(data));
       }}>Get Data</Button>
-      <div>{JSON.stringify(data)}</div>
+      <div>{displayed}</div>
+      {/* <Table data={data} /> */}
     </div>
   );
 }
