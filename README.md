@@ -1,4 +1,4 @@
-# rest-API-test
+# Rest-API-test
 
 This project simulates access to data through web-api, using json-server for mocking, and displaying it in a table.
 
