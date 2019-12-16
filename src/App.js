@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
+import { Typography } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Table from './Table.jsx';
 import Box from '@material-ui/core/Box';
-import { Typography } from '@material-ui/core';
+import Table from './Table.js';
 
 function App() {
   const [url, setUrl] = useState('');
